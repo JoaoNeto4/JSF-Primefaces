@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<h:outputStylesheet library="css" name="file.css" />
+
+	<title>SelectOneMenu</title>
+</h:head>
+<body>
+	<header>
+		<h1>Layout</h1>
+	</header>
+
+	<h:form id="form">
+		<p:panelGrid columns="2">
+
+			<p:selectOneRadio value="#{clienteMB.tipoPessoa}">
+				<f:selectItem itemLabel="Física" itemValue="FISICA" />
+				<f:selectItem itemLabel="Jurídica" itemValue="JURIDICA" />
+				<p:ajax event="click" update="input" process="@this" />
+			</p:selectOneRadio>
+			
+			<h:panelGroup id="input" >
+				<p:inputMask mask="999.999.999-99" value="CPF" id="cpf" rendered="#{clienteMB.tipoPessoa eq 'FISICA'}" required="true"/>
+				<p:inputMask mask="99.999.999/999-99" value="CNPJ" id="cnpj" rendered="#{clienteMB.tipoPessoa eq 'JURIDICA'}" required="true"/>
+				
+			</h:panelGroup>
+			
+		</p:panelGrid>
+	</h:form>
+
+
+
+</body>
+</html>

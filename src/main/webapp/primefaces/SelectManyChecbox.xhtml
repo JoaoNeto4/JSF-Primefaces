@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<h:outputStylesheet library="css" name="file.css" />
+
+	<title>SelectOneMenu</title>
+</h:head>
+<body>
+	<header>
+		<h1>Layout</h1>
+	</header>
+
+	<h:form id="form">
+		<p:panelGrid columns="2">
+
+			<p:selectManyCheckbox value="#{ligaBBVA.timesEspanhois}">
+			<ui:remove>para usar checbox na vertical usar atrituto na linha acima  layout="pageDirection"</ui:remove>
+				<f:selectItem itemLabel="Atletico de Madrid" itemValue="atletico"></f:selectItem>
+				<f:selectItem itemLabel="Barcelona" itemValue="barcelona"></f:selectItem>
+				<f:selectItem itemLabel="Real Madrid" itemValue=""></f:selectItem>
+			</p:selectManyCheckbox>
+			
+			<p:commandButton value="Times" action="#{ligaBBVA.selecionar}" />
+			
+		</p:panelGrid>
+	</h:form>
+
+
+
+</body>
+</html>

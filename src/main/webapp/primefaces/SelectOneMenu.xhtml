@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<h:outputStylesheet library="css" name="file.css" />
+
+	<title>SelectOneMenu</title>
+</h:head>
+<body>
+	<header>
+		<h1>Layout</h1>
+	</header>
+
+	<h:form id="form">
+		<p:panelGrid columns="2">
+
+			<h:outputText value="evento" />
+			<p:selectOneMenu value="#{atividadeMB.atividade.tipoAtividade}" filter="true">
+				<f:selectItems value="#{atividadeMB.atividades}" var="a" itemValue="#{a}" itemLabel="#{a.descricao}" />
+
+
+
+				<ui:remove>
+					<f:selectItem itemLabel="Semana de administracao"
+						itemValue="item 1"></f:selectItem>
+					<f:selectItem itemLabel="Semana do meio ambiente"
+						itemValue="item 2"></f:selectItem>
+					<f:selectItem itemLabel="workshop de administracao"
+						itemValue="item 3"></f:selectItem>
+				</ui:remove>
+			</p:selectOneMenu>
+
+			<p:commandButton value="Enviar" update="label" />
+			<p:outputLabel value="#{atividadeMB.atividade.tipoAtividade.descricao}" id="label"></p:outputLabel>
+
+		</p:panelGrid>
+	</h:form>
+
+
+
+</body>
+</html>
