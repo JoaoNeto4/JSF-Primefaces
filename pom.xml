@@ -11,7 +11,7 @@
 
 
 	<dependencies>
-		
+
 
 		<!-- JSF -->
 		<dependency>
@@ -28,18 +28,43 @@
 			<scope>compile</scope>
 		</dependency>
 
+
 		<dependency>
 			<groupId>org.jboss</groupId>
 			<artifactId>jandex</artifactId>
 			<version>1.2.3.Final</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<!-- biblioteca do PrimeFaces -->
+		<!-- https://mvnrepository.com/artifact/org.primefaces/primefaces -->
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
-			<version>8.0</version>
+			<version>6.0</version>
+		</dependency>
+
+
+		<!-- https://mavenlibs.com/maven/dependency/org.hibernate/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.3.8.Final</version>
+		</dependency>
+
+
+		<!-- https://mavenlibs.com/maven/dependency/org.hibernate/hibernate-entitymanager -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.3.9.Final</version>
+		</dependency>
+
+		<!-- https://mavenlibs.com/maven/dependency/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.29</version>
 		</dependency>
 
 
